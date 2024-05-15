@@ -1,0 +1,462 @@
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.seccion-oscura{
+    color: white;
+    background-color: #1b1b32;
+}
+.seccion-clara{
+    color: black;
+    background-color: white;
+}
+
+.navbar{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.navbar-dark{
+    z-index: 2;
+}
+.navbar-light{
+    z-index: 1;
+}
+.navbar-collapse{
+    justify-content: right;  
+}
+.nav-link{
+    color: white !important;
+    margin-right: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.nav-btn{
+    background-color: #212121;
+    color: white;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.nav-btn:hover {
+    background-color: white;
+    color: #212121;
+}
+.logo-ubbj{
+    width: 300px;
+}
+@media screen and (max-width: 767px){
+    .nav-btn{
+      margin-top: 10px;
+      margin-left: 0px;
+      font-size: 10px;
+    }
+    .nav-link{
+        margin-right: 0px;
+        font-size: 12px;
+    }
+    .logo-ubbj{
+        width: 200px;
+    }
+}
+
+
+/* Informacion*/
+.informacion{
+    padding: 60px 40px 60px 40px;
+}
+
+.informacion .columna{
+    padding: 20px;
+    border: 2px solid #8080804d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.2s ease-in;
+}
+
+.informacion .columna:hover{
+    color: white;
+    background-color: #691c32;
+}
+
+.informacion-titulo{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.informacion i{
+    font-size: 2.5rem;
+    color: white;
+    background-color: #0a0a23;
+    padding: 8px 19px;
+    border-radius: 50%;
+}
+
+
+/* Seccion Evento */
+.section-eventos{
+    background-color: #f9f9f9;
+    box-shadow: 5px 5px 20px rgba(22, 22, 26, 0.18);
+    padding-bottom: 50px;
+}
+.section-eventos .columna{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.2s ease-in;
+}
+.section-eventos .titulo{
+    font-family: cursive;
+    font-weight: 600;
+}
+
+.card {
+    transition: transform 0.2s ease;
+    box-shadow: 5px 5px 20px rgba(22, 22, 26, 0.18);
+    line-height: 150%;
+    height: 320px;
+    width: 350px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.card img{
+   height: 250px;
+   width: 350px;
+   border-radius: 3px;
+}
+
+.card-body{
+   height: 70px;
+   width: 350px;
+   padding: 6px;
+   box-sizing: border-box;
+   position: absolute;
+   bottom: 0;
+   background: rgb(27, 27, 27, .7);
+   color:white;
+}
+
+.card h5{
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   margin: 6px;
+}
+
+.card p{
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   visibility:hidden;
+   opacity: 0;
+}
+
+.card:hover {
+    color: #fff;
+    transform: scale(1.1);
+    cursor: pointer;
+    
+}
+.card:hover .card-body{
+   height: 180px;
+   bottom: 0px;
+   background: rgba(22, 22, 22, 0.9);
+   transition: .5s ease;
+}
+
+.card:hover p{
+   opacity:1;
+   visibility: visible;
+}
+
+@media (max-width:767px){
+    .touch-hover .card:hover .card-body{
+        height: 200px;
+        bottom: 0px;
+        background: rgba(22, 22, 22, 0.9);
+        transition: .5s ease;
+     }
+}
+
+.card button{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    padding: 3px 10px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border-color: #fff;
+    background-color: transparent;
+    display: none;
+}
+.card:hover button{
+    display: initial;
+}
+
+.card button:hover{
+   background:#681c20;
+}
+
+
+/* Estilos del modal */
+.custom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3; /* Z-index más alto para el segundo elemento */
+}
+
+.custom-modal-dialog {
+    max-width: 800px;
+    width: 100%;
+    max-height: 95vh; /* Altura máxima del 95% del viewport height */
+    overflow-y: auto; /* Agrega desbordamiento vertical si el contenido es demasiado largo */
+}
+
+.custom-modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.modal-header {
+    background-color: #691c32;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-modal-title {
+    margin: 0;
+}
+.titulo-modal{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #69231C;
+    border-radius: 20px;
+    padding: 4px 12px 4px 12px;
+}
+.custom-modal-body {
+    padding: 20px;
+}
+
+.custom-modal-footer {
+    background-color: #f8f9fa;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-close{
+    color: white;
+}
+.custom-modal .text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-modal .text-container div{
+    width: 80%;
+}
+.modal-body p{
+    text-align: justify;
+    color: black;
+    font-weight: 400;
+}
+
+
+/* Footer */
+/* Contacto */
+.contacto .container{
+    max-width: 1100px;
+    min-height: 200px;
+    padding: 20px;
+}
+  
+.contacto .rectangulo{
+    margin-top: -5rem;
+    background-color: #1C5669;
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px 1px white;
+}
+  
+.contacto .row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+  
+.contacto .descripcion{
+    color: white;
+    font-size: 1.2rem;
+}
+  
+.contacto button{
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 1.25em 2 em;
+    margin: 10px;
+    border-radius: 100px;
+    transition: all 0.2s ease-in-out;
+}
+  
+.contacto button i{
+    color: white;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+}
+  
+.contacto button:hover{
+    background-color: white;
+    color: black;
+}
+   
+.contacto button:hover i{
+    color: black;
+}
+  
+/* Footer */
+footer{
+    min-height: 500px;
+}
+  
+.footer-logo{
+    height: 120px;
+    width: 120px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 2px solid #012802;
+}
+  
+.footer-texto{
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: 'Quicksand', sans-serif;
+}
+  
+.iconos-redes-sociales a{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+}
+  
+.iconos-redes-sociales i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+  
+.iconos-redes-sociales a:hover{
+    background-color: white;
+    border: 2px solid rgb(13, 110, 253);
+}
+  
+.iconos-redes-sociales a:hover i{
+    color: black;
+}
+  
+.drechos-de-autor{
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+}
+
+
+/* Seccion eventos */
+.seccion-eventos{
+    margin-bottom: 80px;
+}
+
+.seccion-eventos .columna{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.2s ease-in;
+}
+.card-button{
+    text-decoration: none;
+    color: black;
+}
+.card-custom-evento{
+    width: 15rem;
+}
+.card-custom-evento:hover .overlay{
+    opacity: 1;
+}
+.card-custom-evento:hover img{
+    opacity: 0.2;
+}
+
+
+.overlay{
+    transition: all 0.2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+  
+.overlay p{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.overlay p:hover{
+    color: black;
+}
+
+.card-custom-evento{
+    position: relative;
+}
+
+
+/* ---------------------------------------- */
+.section-login{
+    background-color: rgb(252, 226, 195)
+}
+.card-body-form h5{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.card-body-form label{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.card-body-form{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.card-body-white{
+    background-color: white;
+    border-radius: 1rem;
+}
+.img-login{
+    height:600px; 
+    width: 600px; 
+    border-radius: 10px;
+}
